@@ -1,6 +1,10 @@
 name: Crystal CI
 
-on: [push]
+on:
+  pull_request:
+  push:
+  schedule:
+    - cron: 0 2 * * *    
 
 jobs:
   build:
