@@ -79,7 +79,7 @@ module Identicon
     hash >>= 24
 
     sqx = sqy = 0
-    (grid_size * (grid_size + 1) / 2).times do
+    (grid_size * (grid_size + 1) // 2).times do
       if hash & 1 == 1
         x = border_size + (sqx * square_size)
         y = border_size + (sqy * square_size)
